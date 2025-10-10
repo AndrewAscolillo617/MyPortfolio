@@ -1,7 +1,15 @@
 {
   "compilerOptions": {
+    "baseUrl": "src/", //configured for absolute imports | changes path from 
+                       // import { Button } from '../../../components/button' 
+                    // to: import { Button } from '@/components/button'
+    
+    //You can alias path modules with the code below. 
+    // The alias on the right is the alias for the path on the left
+    //Each path is relative to the baseUrl location (src/)
     "paths": {
-      "@/*": ["./src/*"]
+      "@/styles/*": ["styles/*"],  
+      "@/components/*": ["components/*"]
     }
   }
 }

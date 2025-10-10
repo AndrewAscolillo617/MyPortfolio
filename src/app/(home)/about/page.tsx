@@ -1,9 +1,11 @@
 import Image from "next/image";
-import styles from "./page.module.css";
+import styles from "./aboutpage.module.css";
 
-export default function Home() {
+export default function About() {
   return (
+    
     <div className={styles.page}>
+      <h3>About, Page!, Referencing my own css</h3>
       <main className={styles.main}>
         <Image
           className={styles.logo}
@@ -90,6 +92,7 @@ export default function Home() {
           Go to nextjs.org →
         </a>
       </footer>
+      <Image src="/profile - Copy.png" alt="Profile" width={200} height={200}></Image>
     </div>
   );
 }

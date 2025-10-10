@@ -1,0 +1,22 @@
+
+
+.outerContainer{
+    position: relative;
+    margin-top: 2rem;
+    
+    height: 10rem;
+    display: flex;
+    width: 40%;
+    justify-self: center;
+    font-size: clamp(1rem, 2vw, 2rem);
+    
+}
+
+
+.aboutMe{
+    font-weight: bold;
+   
+}
+
+
+

@@ -1,0 +1,140 @@
+.navParent{
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  position: sticky;
+  z-index: 1;
+  top: 0;
+}
+
+.nav {
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  
+  width: 85%;
+  border-radius: .6rem;
+  position: sticky;
+  top: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  
+}
+
+.link {
+  font-size: .85rem;
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  color: rgb(96, 96, 96);
+ 
+}
+.active{
+  color:  #00ffbf;
+  text-decoration: none;
+  font-size: .85rem;
+}
+
+
+.link:hover {
+  color: #f300d3;
+}
+
+.logo{
+  font-weight: bold;
+  font-size: 1.2rem;
+
+}
+
+.toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  text-decoration: none;
+  
+  color: inherit;
+  order: 3;
+  width: 2rem;
+  height: 2rem;
+  line-height: 1;
+
+}
+
+.menu {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.divRight{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  
+}
+
+
+@media (max-width: 768px) {
+  .toggle {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+
+  .toggle:hover {
+    cursor: pointer;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 5px;
+    background-color: rgb(234, 243, 252);
+  }
+  
+.nav {
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  
+  width: 100%;
+  border-radius: .6rem;
+  position: sticky;
+  top: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+  .menu {
+    
+    display: none;
+    
+    margin-top: .5rem;
+    flex-direction: column;
+    position: absolute;
+    top: 4rem;
+    right: 2rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 1rem;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    
+    
+  }
+
+  .menu.open {
+    display: flex;
+  }
+}
+
+
