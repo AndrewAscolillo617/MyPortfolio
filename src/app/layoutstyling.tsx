@@ -21,7 +21,7 @@ const LayoutStyle = ( { children })  => {
     display: 'flex',
     flexDirection: 'column',
     padding: 0, 
-    margin: 0,
+    margin: 0
     
     
   };

@@ -6,15 +6,19 @@
     
     height: 10rem;
     display: flex;
-    width: 40%;
+    width: 35%;
     justify-self: center;
     font-size: clamp(1rem, 2vw, 2rem);
+    z-index: 0;
     
 }
 
 
 .aboutMe{
     font-weight: bold;
+    text-align: center;
+   
+    
    
 }
 
