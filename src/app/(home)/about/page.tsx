@@ -3,96 +3,22 @@ import styles from "./aboutpage.module.css";
 
 export default function About() {
   return (
-    
-    <div className={styles.page}>
-      <h3>About, Page!, Referencing my own css</h3>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.js</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+      <div>
+        <div className={styles.outerContainer}>
+          <p>About Me</p>
+          <p>I’m a full-stack developer with a sharp focus on architectural clarity and system design. 
+            My academic foundation and hands-on experience have shaped a methodical, 
+            principle-driven approach to building scalable, maintainable software.</p>
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+          <p>I’ve worked with Python, Flask, JavaScript, HTML, CSS, TypeScript, React, Next.js, Heroku, PostgreSQL, 
+            and more — always pushing for clean logic and purposeful design. I approach development with discipline 
+            and curiosity, constantly refining my skills and aligning with best practices.</p>
+          <p>I’m actively seeking a full-time role where I can grow as a teammate and deliver high-impact code.</p>
+          <p>I’m driven to master full-stack development end-to-end — from initial concept and layout architecture 
+            to deployment and optimization. I believe in understanding every layer of the stack, not just using it.</p>
+          <p>I’m excited to contribute to a company that values clarity, intent, and technical excellence as much as I do.</p>
+
         </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-      <Image src="/profile - Copy.png" alt="Profile" width={200} height={200}></Image>
-    </div>
-  );
+      </div>
+    );
 }

@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation';
 import styles from './Navbar.module.css';
 import DarkModeButton from "../components/DarkModeButton";
 import { useTheme } from "../app/themeContext";
+
 const navItems = [
   {label : 'Home', href : '/'},
   {label : 'About', href : '/about'},
@@ -17,6 +18,7 @@ const navItems = [
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState<null | 'links' | 'themes'>(null);
+  const { theme } = useTheme()
   const handleClick = (key: 'themes' | 'links') => {
     setActiveMenu(prev => (prev == key ? null : key));
   }
@@ -34,12 +36,13 @@ export default function Navbar() {
           
           <div className={styles.divRight}>
             <button className={styles.toggle} onClick={() => {setIsOpen(!isOpen); handleClick('links'); console.log(activeMenu)}}>☰</button>
+            
             <ul className={`${styles.menu} ${activeMenu == 'links' ? styles.open : ''}`}>
-              {navItems.map(({ label, href }) => (
+              {navItems.map(({ label, href }) => ( // label : "Home", href "/"etc.
                 <li key={href}>
                   <Link
                     href={href}
-                    className={pathname === href ? styles.active : styles.link}
+                    className={`${styles.link} ${styles[theme]} ${pathname === href ? styles.active : ''}`}
                     onClick={() => setIsOpen(false)}
                   >
                     {label}
