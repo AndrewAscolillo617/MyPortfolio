@@ -3,8 +3,8 @@ import styles from "./aboutpage.module.css";
 
 export default function About() {
   return (
-      <div>
-        <div className={styles.outerContainer}>
+      <div className={styles.aboutPage}>
+        <div className={styles.aboutMeContainer}>
           <p>About Me</p>
           <p>I’m a full-stack developer with a sharp focus on architectural clarity and system design. 
             My academic foundation and hands-on experience have shaped a methodical, 

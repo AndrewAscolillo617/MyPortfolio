@@ -4,6 +4,7 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import HomeAbout from "../../components/HomeAbout";
 import { useTheme } from "../themeContext"; 
+import ContactForm from "../../components/ContactForm";
 
 export default function Home() {
   const { theme } = useTheme();
@@ -46,6 +47,8 @@ export default function Home() {
 
 
       </div>
+
+      <ContactForm></ContactForm>
     </div>
   );
 }
