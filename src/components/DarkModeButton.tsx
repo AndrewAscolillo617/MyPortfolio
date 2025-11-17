@@ -5,12 +5,12 @@ import { useTheme } from '../app/themeContext';
 import { useState } from 'react';
 
 type Theme = "light" | "dark";
-const DarkModeButton = ({linkDropDownActive, setLinkDropdownActive, handleClick}) => {
+
+const DarkModeButton = ({activeDropDownMenu, handleClick}) => {
    
-    
     const { toggleTheme } = useTheme();
     const { theme } = useTheme();
-    const [isOpen, setIsOpen] = useState(false);
+    
     
     const navItems = [
         {label : 'Light Mode', value : 'light'},
@@ -23,19 +23,19 @@ const DarkModeButton = ({linkDropDownActive, setLinkDropdownActive, handleClick}
         
         <div className={styles.darkModeContainerBtn}>
             <div className={`${styles.DarkModeButton} `} onClick={ () => {
-                 //console.log('Before toggle:', isOpen);
-                handleClick('themes')
-                console.log(linkDropDownActive)
-                setIsOpen(!isOpen) }} >
+                
+                handleClick('themes') //this gets passed up to navbar file
+                //console.log(activeDropDownMenu)
+                 }} >
                 <img src={`${theme}.svg`} width={20} height={20} alt={`${theme == 'light' ? 'Light' : 'Dark'} Mode`}/>
             
             </div>
             
-             <ul className={`${styles.menu} ${linkDropDownActive=='themes' ? styles.open : ''}`}>
+             <ul className={`${styles.menu} ${activeDropDownMenu=='themes' ? styles.open : ''}`}>
                 { navItems.map(({label, value}) => (
                     
                     
-                    <li  key={value} onClick={() => {setSelectedItem(value); setIsOpen(false); toggleTheme(value as Theme); }} className={selectedItem === value ? styles.active : styles.themeOption}>
+                    <li  key={value} onClick={() => {setSelectedItem(value);  toggleTheme(value as Theme); handleClick('themes')}} className={selectedItem === value ? styles.active : styles.themeOption}>
                         
                         {label}</li>
                 )) }

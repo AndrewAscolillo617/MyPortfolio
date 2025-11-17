@@ -52,7 +52,7 @@
 }
 
 .themeOption {
-  
+  font-size: .85rem;
   color: inherit;
   text-decoration: none;
 
@@ -63,8 +63,9 @@
 }
 
 .active{
+  font-size: .85rem;
   color:  #00ffbf;
-cursor: pointer;
+  cursor: pointer;
 }
 
 .active:hover{
