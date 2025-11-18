@@ -1,7 +1,7 @@
 name: React Portfolio CI
 
 on:
-  push: 
+  push:
     branches: [main]
   pull_request:
     branches: [main]
@@ -24,7 +24,10 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Lint 
+      - name: Clear ESLint cache
+        run: rm -rf node_modules/.cache
+
+      - name: Lint
         run: npm run lint
 
       - name: Format

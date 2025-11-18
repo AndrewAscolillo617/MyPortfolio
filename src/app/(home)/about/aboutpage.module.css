@@ -1,10 +1,9 @@
-.aboutPage{
+.aboutPage {
   display: flex;
   justify-content: center;
-  
 }
 
-.aboutMeContainer{
+.aboutMeContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,5 +11,3 @@
   padding: 2rem;
   text-align: center;
 }
-
-

@@ -12,13 +12,10 @@ A simple portfolio built with Next.js and Tailwind CSS. It’s designed to be mo
 ## Features
 
 - Darkmode/Lightmode theme toggle
-- Contact form 
+- Contact form
 - Responsive Layout
-- Accessible and SEO-friendly 
+- Accessible and SEO-friendly
 
 ## Design Philosophy
 
 This project is both a functional portfolio and a learning exercise. The code is intentionally minimal, maintainable, and adaptable, with the goal of evolving and refactoring over time. Every component is modular, and every interaction is purposeful.
-
-
-

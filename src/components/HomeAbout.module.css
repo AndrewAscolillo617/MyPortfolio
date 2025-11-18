@@ -1,28 +1,18 @@
+.outerContainer {
+  position: relative;
+  display: flex;
+  justify-self: center;
+  margin-top: 2rem;
 
+  height: 10rem;
 
-.outerContainer{
-    position: relative;
-    display: flex;
-    justify-self: center;
-    margin-top: 2rem;
-    
-    height: 10rem;
-    
-    width: 35%;
-    
-    font-size: clamp(1rem, 2vw, 2rem);
-    z-index: 0;
-    
+  width: 35%;
+
+  font-size: clamp(1rem, 2vw, 2rem);
+  z-index: 0;
 }
 
-
-.aboutMe{
-    font-weight: bold;
-    text-align: center;
-   
-    
-   
+.aboutMe {
+  font-weight: bold;
+  text-align: center;
 }
-
-
-

@@ -1,52 +1,48 @@
-.ContactFormA{
-    
-    position: relative;
-    display: flex;
-    height: 400px;
-    flex-direction: column;
-    align-items: center;
-    /*border: 1px solid lime;*/
-    justify-content: center;
-    width: 65%;
-    justify-self: center;
-    margin: 2rem;
-    gap: 2rem;
+.ContactFormA {
+  position: relative;
+  display: flex;
+  height: 400px;
+  flex-direction: column;
+  align-items: center;
+  /*border: 1px solid lime;*/
+  justify-content: center;
+  width: 65%;
+  justify-self: center;
+  margin: 2rem;
+  gap: 2rem;
 }
 
-.contactFormHeader{
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: .5rem;
-    text-align: center;
-    /*border: solid 1px limegreen;*/
-    
+.contactFormHeader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: center;
+  /*border: solid 1px limegreen;*/
 }
 
-.contactFormHeader > *{
-    margin: 0;
+.contactFormHeader > * {
+  margin: 0;
 }
 
-.contactMeText{
-    font-size: clamp(1rem, 2vw, 2rem);
+.contactMeText {
+  font-size: clamp(1rem, 2vw, 2rem);
 }
 
-.contactMeInstructions{
-    font-size: clamp(.75rem, 2vw, 1rem);
+.contactMeInstructions {
+  font-size: clamp(0.75rem, 2vw, 1rem);
 }
-.inputGroup{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    max-width: 400px;
-    gap: .5rem;
-    
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px;
+  gap: 0.5rem;
 }
 
-.textBox{
-    resize: none;
-   
-    height: 50px;
+.textBox {
+  resize: none;
+
+  height: 50px;
 }

@@ -1,15 +1,16 @@
-'use client';
+"use client";
 
 import React, { createContext, useContext, useState, ReactNode } from "react";
 
 type Theme = "light" | "dark"; //Union type, theme can only be 'light' or dark'
 
-interface ThemeContextType { //define shape of context value. Any component using this context knows exactly what it is getting. 
-  theme: Theme;  
+interface ThemeContextType {
+  //define shape of context value. Any component using this context knows exactly what it is getting.
+  theme: Theme;
   toggleTheme: (newTheme: Theme) => void;
 }
 
-//<--  createContext<ThemeContextType | undefined> 
+//<--  createContext<ThemeContextType | undefined>
 // The above means the context will contain a valid theme object or be undefined (before the provider wraps the app)
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined); //actual ThemeContext Object
 
@@ -30,7 +31,7 @@ export const ThemeProvider = ({ children }: { children: ReactNode }) => {
 };
 
 export const useTheme = (): ThemeContextType => {
-  console.log('useTheme triggered.')
+  console.log("useTheme triggered.");
   const context = useContext(ThemeContext);
   if (!context) throw new Error("useTheme must be used within ThemeProvider");
   return context;

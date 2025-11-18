@@ -1,79 +1,73 @@
-.darkModeContainerBtn{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    z-index: 1;
-   
+.darkModeContainerBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  z-index: 1;
 }
 
 .DarkModeButton {
-    width: 2rem;
-    height: 2rem;
-    background-color: transparent;
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    border: none;
+  width: 2rem;
+  height: 2rem;
+  background-color: transparent;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  border: none;
 }
 
-.DarkModeButton:hover{
-    cursor: pointer;
-    
-    border-radius: 5px;
-    background-color: rgb(234, 243, 252);
+.DarkModeButton:hover {
+  cursor: pointer;
+
+  border-radius: 5px;
+  background-color: rgb(234, 243, 252);
 }
 
-.menu{
-    display: none;
-    gap: 1rem;
-    list-style: none;
-    justify-content: center;
-    align-items: center;
-    
-    margin-top: .5rem;
-    flex-direction: column;
-    position: absolute;
-    top: 5rem;
-    right: 2rem;
-    background-color: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    padding: 1rem;
-    border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    z-index: 999;
-    
+.menu {
+  display: none;
+  gap: 1rem;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 0.5rem;
+  flex-direction: column;
+  position: absolute;
+  top: 5rem;
+  right: 2rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 1rem;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 999;
 }
 
-.menu.open{
-    top: 5rem;
-    display: flex;
+.menu.open {
+  top: 5rem;
+  display: flex;
 }
 
 .themeOption {
-  font-size: .85rem;
+  font-size: 0.85rem;
   color: inherit;
   text-decoration: none;
 
   transition: color 0.2s ease;
-  
-
-  
 }
 
-.active{
-  font-size: .85rem;
-  color:  #00ffbf;
+.active {
+  font-size: 0.85rem;
+  color: #00ffbf;
   cursor: pointer;
 }
 
-.active:hover{
-  color:  #f300d3;
+.active:hover {
+  color: #f300d3;
 }
 
 .themeOption:hover {
   color: #f300d3;
   cursor: pointer;
 }
-
