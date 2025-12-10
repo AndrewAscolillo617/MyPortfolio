@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 // src/app/notes/loading.tsx
 export default function loading() {

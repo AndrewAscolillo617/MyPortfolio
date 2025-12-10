@@ -13,7 +13,7 @@ const navItems = [
   { label: "DSA", href: "/dsa" },
   { label: "Projects", href: "/projects" },
   { label: "Blog/Notes", href: "/notes" },
-  { label: "Contact", href: "/contact" }
+  { label: "Contact", href: "/contact" },
 ];
 
 export default function Navbar() {

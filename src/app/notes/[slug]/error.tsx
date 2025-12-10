@@ -1,7 +1,12 @@
-
 "use client"; // required for error boundaries
 
-export default function error({ error, reset }: { error: Error; reset: () => void }) {
+export default function error({
+  error,
+  reset,
+}: {
+  error: Error;
+  reset: () => void;
+}) {
   return (
     <div>
       <h2>Something went wrong!</h2>
