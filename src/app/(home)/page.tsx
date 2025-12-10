@@ -2,9 +2,9 @@
 
 import Image from "next/image";
 import styles from "./page.module.css";
-import HomeAbout from "../../components/HomeAbout";
-import { useTheme } from "../themeContext";
-import ContactForm from "../../components/ContactForm";
+import HomeAbout from "components/HomeAbout";
+import { useTheme } from "app/themeContext";
+import ContactForm from "components/ContactForm";
 
 export default function Home() {
   const { theme } = useTheme();
