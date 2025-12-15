@@ -5,6 +5,7 @@
   position: sticky;
   z-index: 1;
   top: 0;
+  max-height: 115.33px;
 }
 
 .nav {
@@ -21,6 +22,7 @@
   position: sticky;
   top: 0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-height: 83.33px;
 }
 
 .link {
@@ -50,6 +52,11 @@
 .logo {
   font-weight: bold;
   font-size: 1.2rem;
+}
+.logoButton {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
 
 .toggle {

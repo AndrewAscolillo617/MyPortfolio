@@ -16,11 +16,19 @@ const ThemeContext = createContext<ThemeContextType | undefined>(undefined); //a
 
 //This function expects an object with one property called children, and children must be a ReactNode which means anything under React can enter
 
-export const ThemeProvider = ({ children }: { children: ReactNode }) => {
-  const [theme, setTheme] = useState<Theme>("light");
+export const ThemeProvider = ({
+  children,
+  initialTheme,
+}: {
+  children: ReactNode;
+  initialTheme: Theme;
+}) => {
+  const [theme, setTheme] = useState<Theme>(initialTheme);
 
-  const toggleTheme = (newTheme) => {
+  const toggleTheme = (newTheme: Theme) => {
     setTheme(newTheme);
+    document.cookie = `theme=${newTheme}; path=/`; // sync back to cookie
+    document.documentElement.setAttribute("data-theme", newTheme);
   };
 
   return (

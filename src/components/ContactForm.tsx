@@ -70,7 +70,7 @@ export default function ContactForm() {
   };
 
   return (
-    <div className={styles.ContactFormA}>
+    <div id="contact" className={styles.ContactFormA}>
       <div className={styles.contactFormHeader}>
         <h1 className={styles.contactMeText}>Contact Me</h1>
         <p className={styles.contactMeInstructions}>

@@ -29,7 +29,7 @@ const DarkModeButton = ({ activeDropDownMenu, handleClick }) => {
         }}
       >
         <Image
-          src={`${theme}.svg`}
+          src={`/${theme}.svg`}
           width={20}
           height={20}
           alt={`${theme == "light" ? "Light" : "Dark"} Mode`}

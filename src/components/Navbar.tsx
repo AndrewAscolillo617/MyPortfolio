@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import styles from "./Navbar.module.css";
 import DarkModeButton from "../components/DarkModeButton";
 import { useTheme } from "../app/themeContext";
+import Image from "next/image";
 
 const navItems = [
   { label: "Home", href: "/" },
@@ -13,7 +14,7 @@ const navItems = [
   { label: "DSA", href: "/dsa" },
   { label: "Projects", href: "/projects" },
   { label: "Blog/Notes", href: "/notes" },
-  { label: "Contact", href: "/contact" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 export default function Navbar() {
@@ -22,14 +23,14 @@ export default function Navbar() {
   const { theme } = useTheme();
 
   /*
-    handleClick takes one argument: key, which is of type union and must be either 'themes', or 'links'.
+    handleClick takes one argument: key, which is of type union and must be either 'themes'( you currently have the theme menu open), or 'links' (you clicked the hamburger button and have the nav bar dropdown ).
     key becomes whatever menu is accessed. If you click the theme buttom key is 'theme', if you click links 
     key is 'links'
     setActiveMenu is called to set the variable activeMenu to either 'themes' or 'links'
     to keep track of which menu is open. 
     setActiveMenu receives the previous value of the state 'prev'(initially set to null)
     and updates it based on a conditional:
-    if prev === key, (you click an already opem menu) it sets the state to null and closes the menu.
+    if prev === key, (you click an already open menu) it sets the state to null and closes the menu.
     if prev != key, setActiveMenu sets the activeMenu to the key and opens the new menu
   */
 
@@ -41,7 +42,11 @@ export default function Navbar() {
   return (
     <div className={styles.navParent}>
       <nav className={styles.nav}>
-        <div className={styles.logo}>My Site</div>
+        <div className={styles.logo}>
+          <button className={styles.logoButton}>
+            <Image src={`/AALogo3.png`} width={60} height={50} alt="logo" />
+          </button>
+        </div>
 
         <div className={styles.divRight}>
           <button
@@ -66,9 +71,18 @@ export default function Navbar() {
                   <Link
                     href={href}
                     className={`${styles.link} ${styles[theme]} ${pathname === href ? styles.active : ""}`}
-                    onClick={() => {
+                    onClick={(e) => {
                       setIsOpen(false);
                       handleClick("links");
+
+                      if (href.startsWith("/#")) {
+                        if (pathname === "/") {
+                          e.preventDefault();
+                        }
+
+                        const el = document.getElementById(href.slice(2));
+                        if (el) el.scrollIntoView({ behavior: "smooth" });
+                      }
                     }}
                   >
                     {label}

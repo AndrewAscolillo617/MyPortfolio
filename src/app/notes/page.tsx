@@ -1,7 +1,7 @@
 // src/app/notes/page.tsx
-"use client";
-import Link from "next/link";
 
+import Link from "next/link";
+import styles from "./page.module.css";
 const posts = [
   {
     slug: "nextjs-routing",
@@ -17,7 +17,7 @@ const posts = [
 
 export default function notes() {
   return (
-    <main>
+    <div className={styles.notesContainer}>
       <h1>Learning Notes</h1>
       <ul>
         {posts.map((post) => (
@@ -27,6 +27,6 @@ export default function notes() {
           </li>
         ))}
       </ul>
-    </main>
+    </div>
   );
 }
