@@ -1,0 +1,174 @@
+@import "tailwindcss";
+
+.layout {
+    min-height: 100dvh; 
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    transition: background 0.25s ease, color 0.25s ease;
+    
+
+
+  }
+
+
+
+:root[data-theme="light"] {
+  --bg: #fff;
+  --text: #000;
+  --border-fields: #00ffbf;
+  --box-shadow: rgba(255,255,255,0.2);
+  --button-bg: #000000;
+  --button-text: white;
+  --placeholder-color: rgb(72, 72, 72);
+  --navbar-link-color: rgb(0, 0, 0);
+  --menu-bg: rgba(255, 255, 255, .98);
+  --theme-selector-bg: rgba(255, 255, 255, .98);
+  --theme-option-color: rgb(0, 0, 0);
+  
+
+
+}
+
+
+:root[data-theme="dark"] {
+  --bg: #000;
+  --text: #fff;
+  --border-fields: #00ffbf;
+  --box-shadow: rgba(255,255,255,0.2);
+  --button-bg: #00ffbf;
+  --button-text: black;
+  --placeholder-color: rgb(212, 212, 212);
+  --navbar-link-color: white;
+  --menu-bg: rgba(81, 74, 86, 0.98);
+  --theme-selector-bg:  rgba(81, 74, 86, 0.98);
+  --theme-option-color: white;
+ 
+
+
+}
+
+.link{
+  font-size: 0.85rem;
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  color: var(--navbar-link-color);
+}
+
+.themeOptions{
+  font-size: 0.85rem;
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  color: var(--theme-option-color);
+}
+
+.themeOptions:hover{
+  color: #f300d3;
+  cursor: pointer;
+}
+
+
+.active {
+  color: #00ffbf;
+  text-decoration: none;
+  font-size: 0.85rem;
+}
+
+.link:hover {
+  color: #f300d3;
+}
+
+.menu{
+  display: flex;
+  gap: 1rem;
+  
+  justify-content: center;
+  align-items: center;
+ 
+}
+
+.themeSelector{
+  display: flex;
+  gap: 1rem;
+  background-color: var(--theme-selector-bg);
+
+}
+
+
+input,
+textarea,
+button {
+
+  border: 1.5px solid;
+  border-radius: 6px;
+  padding: 6px;
+}
+
+input::placeholder,
+textarea::placeholder{
+  color: var(--placeholder-color)
+}
+
+button{
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  cursor: pointer;
+  
+}
+
+input:focus,
+textarea:focus{
+
+  outline: none;
+  border: 2px solid var(--border-fields);
+  box-shadow: 0 0 0 1px var(--box-shadow);
+
+
+}
+
+
+
+
+
+
+
+
+.gradientLightTop{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 0;
+
+}
+
+.gradientLightBottom{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 0;
+
+}
+
+
+
+@media (max-width: 768px) {
+
+.menu{
+  
+  background-color: var(--menu-bg);
+  
+}
+
+
+}

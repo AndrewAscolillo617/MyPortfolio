@@ -14,14 +14,13 @@ const navItems = [
   { label: "DSA", href: "/dsa" },
   { label: "Projects", href: "/projects" },
   { label: "Blog/Notes", href: "/notes" },
-  { label: "Contact", href: "/#contact" },
+  { label: "Contact", href: "/#contact"},
 ];
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState<null | "links" | "themes">(null);
-  const { theme } = useTheme();
-
+  
+  //console.log("NAVBAR MOUNTED")
   /*
     handleClick takes one argument: key, which is of type union and must be either 'themes'( you currently have the theme menu open), or 'links' (you clicked the hamburger button and have the nav bar dropdown ).
     key becomes whatever menu is accessed. If you click the theme buttom key is 'theme', if you click links 
@@ -37,14 +36,19 @@ export default function Navbar() {
   const handleClick = (key: "themes" | "links") => {
     setActiveMenu((prev) => (prev == key ? null : key));
   };
+  
   const pathname = usePathname();
-
+  console.log(activeMenu)
   return (
     <div className={styles.navParent}>
       <nav className={styles.nav}>
         <div className={styles.logo}>
           <button className={styles.logoButton}>
-            <Image src={`/AALogo3.png`} width={60} height={50} alt="logo" />
+            <Link href='/'>
+            
+              <Image src={`/AALogo3.png`} width={60} height={50} alt="logo" />
+            
+            </Link>
           </button>
         </div>
 
@@ -52,16 +56,17 @@ export default function Navbar() {
           <button
             className={styles.toggle}
             onClick={() => {
-              setIsOpen(!isOpen);
+              
               handleClick("links");
-              console.log(activeMenu);
+              console.log(activeMenu)
+              
             }}
           >
             ☰
           </button>
 
           <ul
-            className={`${styles.menu} ${activeMenu == "links" ? styles.open : ""}`}
+            className={`menu  ${styles.menu} ${activeMenu == "links" ? styles.open : ""}`}
           >
             {navItems.map(
               (
@@ -70,18 +75,23 @@ export default function Navbar() {
                 <li key={href}>
                   <Link
                     href={href}
-                    className={`${styles.link} ${styles[theme]} ${pathname === href ? styles.active : ""}`}
+                    className={`link ${pathname === href ? `active` : ""}`}
+                    
                     onClick={(e) => {
-                      setIsOpen(false);
+                    
+                      
                       handleClick("links");
-
-                      if (href.startsWith("/#")) {
-                        if (pathname === "/") {
-                          e.preventDefault();
-                        }
-
+                    
+                     if (href.startsWith("/#") && pathname === "/") {
+                        e.preventDefault();
                         const el = document.getElementById(href.slice(2));
-                        if (el) el.scrollIntoView({ behavior: "smooth" });
+                        if (el) {
+                          el.scrollIntoView({ behavior: "smooth"})
+                        }
+                        
+                        
+                       
+                        
                       }
                     }}
                   >

@@ -15,7 +15,7 @@ export default function About() {
 
         <p>
           I’ve worked with Python, Flask, JavaScript, HTML, CSS, TypeScript,
-          React, Next.js, Heroku, PostgreSQL, and more — always pushing for
+          React, Next.js, Heroku, PostgreSQL, and more. I am always pushing for
           clean logic and purposeful design. I approach development with
           discipline and curiosity, constantly refining my skills and aligning
           with best practices.
@@ -25,14 +25,16 @@ export default function About() {
           and deliver high-impact code.
         </p>
         <p>
-          I’m driven to master full-stack development end-to-end — from initial
+          I’m driven to master full-stack development end-to-end, from initial
           concept and layout architecture to deployment and optimization. I
-          believe in understanding every layer of the stack, not just using it.
+          believe in understanding every layer of the stack.
         </p>
         <p>
           I’m excited to contribute to a company that values clarity, intent,
           and technical excellence as much as I do.
         </p>
+        <p>You can contact me by clicking 'contact' on the navigation bar and sending me an email.</p>
+        <p>- Andrew</p>
       </div>
     </div>
   );

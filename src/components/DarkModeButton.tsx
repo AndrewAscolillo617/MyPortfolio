@@ -37,7 +37,7 @@ const DarkModeButton = ({ activeDropDownMenu, handleClick }) => {
       </div>
 
       <ul
-        className={`${styles.menu} ${activeDropDownMenu == "themes" ? styles.open : ""}`}
+        className={`themeSelector ${styles.menu} ${activeDropDownMenu == "themes" ? styles.open : ""}`}
       >
         {navItems.map(({ label, value }) => (
           <li
@@ -48,7 +48,7 @@ const DarkModeButton = ({ activeDropDownMenu, handleClick }) => {
               handleClick("themes");
             }}
             className={
-              selectedItem === value ? styles.active : styles.themeOption
+              selectedItem === value ? 'active' : 'themeOptions'
             }
           >
             {label}

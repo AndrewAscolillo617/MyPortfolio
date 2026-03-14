@@ -2,10 +2,13 @@
   display: flex;
   justify-content: center;
   padding: 1rem;
-  position: sticky;
-  z-index: 1;
+ position: fixed;
   top: 0;
-  max-height: 115.33px;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  
+  
 }
 
 .nav {
@@ -16,37 +19,18 @@
   background-color: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-
   width: 85%;
+  max-width: 1200px; /* or 1100px, 1280px, etc. */
   border-radius: 0.6rem;
-  position: sticky;
-  top: 0;
+  position: relative;
+  
+  
+  
+  
+  
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  max-height: 83.33px;
-}
 
-.link {
-  font-size: 0.85rem;
-  color: inherit;
-  text-decoration: none;
-  transition: color 0.2s ease;
-  color: rgb(96, 96, 96);
-}
-.light {
-  color: rgb(96, 96, 96);
-}
-.dark {
-  color: white;
-}
-
-.active {
-  color: #00ffbf;
-  text-decoration: none;
-  font-size: 0.85rem;
-}
-
-.link:hover {
-  color: #f300d3;
+  will-change: transform;
 }
 
 .logo {
@@ -65,7 +49,7 @@
   border: none;
   font-size: 1.2rem;
   text-decoration: none;
-
+  
   color: inherit;
   order: 3;
   width: 2rem;
@@ -74,11 +58,8 @@
 }
 
 .menu {
-  display: flex;
   gap: 1rem;
-  list-style: none;
-  justify-content: center;
-  align-items: center;
+  padding: 1rem;
 }
 
 .divRight {
@@ -100,39 +81,30 @@
     width: 2rem;
     height: 2rem;
     border-radius: 5px;
-    background-color: rgb(234, 243, 252);
+    background-color: rgb(234, 243, 252, .5);
   }
 
   .nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background-color: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-
     width: 100%;
-    border-radius: 0.6rem;
-    position: sticky;
-    top: 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 999;
   }
   .menu {
     display: none;
-
-    margin-top: 0.5rem;
+    margin-top: 1rem;
     flex-direction: column;
     position: absolute;
-    top: 4rem;
-    right: 2rem;
-    background-color: rgba(255, 255, 255, 0.2);
+    top: 100%;
+    width: 100%;
+    left: 0;
     padding: 1rem;
     border-radius: 4px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    
   }
 
-  .menu.open {
+  .open {
     display: flex;
   }
+
+
 }

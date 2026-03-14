@@ -14,45 +14,20 @@ const inter = Inter({
 const LayoutStyle = ({ children }: { children: React.ReactNode }) => {
   const { theme } = useTheme();
 
-  const styles: React.CSSProperties = {
-    backgroundColor: theme === "light" ? "#ffffffff" : "#000000ff",
-    color: theme === "light" ? "#000" : "#ffffffff",
-    minHeight: "100vh",
-    display: "flex",
-    flexDirection: "column",
-    position: "relative",
-    overflow: "hidden",
-    padding: 0,
-    margin: 0,
-  };
+ 
 
   return (
-    <div style={styles} className={inter.className}>
-      <div
-        style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          width: "100%",
-          zIndex: 0,
-        }}
-      >
+    <div className={`${inter.className} layout`}>
+      <div className="gradientLightTop">
         <GradientBackgroundLight />
       </div>
-      <div style={{ position: "relative", zIndex: 1 }}>
+      
+      <div style={{ position: "relative", zIndex: 1 , paddingTop: "115px"}}>
         <Navbar />
         {children}
       </div>
 
-      <div
-        style={{
-          position: "absolute",
-          bottom: 0,
-          left: 0,
-          width: "100%",
-          zIndex: 0,
-        }}
-      >
+      <div className="gradientLightBottom">
         <GradientBackgroundLight position="bottom" flipped />
       </div>
     </div>

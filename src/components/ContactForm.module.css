@@ -1,29 +1,32 @@
-.ContactFormA {
-  position: relative;
+.ContactForm {
   display: flex;
-  height: 400px;
-  flex-direction: column;
-  align-items: center;
-  /*border: 1px solid lime;*/
+  /*border: solid lime 2px;*/
   justify-content: center;
-  width: 65%;
-  justify-self: center;
-  margin: 2rem;
+  width: 90%;
+  margin: 2rem auto 0 auto;
+  padding: 2rem;
+}
+
+.contactFormContent{
+  display: flex;
+  flex-direction: column;
   gap: 2rem;
+  max-width: 400px;
+  padding: 2rem; 
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 0.6rem;
+  width: 100%;
+  /*border: solid lime 2px;*/
 }
 
 .contactFormHeader {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
   text-align: center;
   /*border: solid 1px limegreen;*/
-}
-
-.contactFormHeader > * {
-  margin: 0;
 }
 
 .contactMeText {
@@ -33,6 +36,7 @@
 .contactMeInstructions {
   font-size: clamp(0.75rem, 2vw, 1rem);
 }
+
 .inputGroup {
   display: flex;
   flex-direction: column;
@@ -43,6 +47,5 @@
 
 .textBox {
   resize: none;
-
-  height: 50px;
+  height: 120px;
 }
