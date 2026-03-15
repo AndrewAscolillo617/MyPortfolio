@@ -2,13 +2,11 @@
   display: flex;
   justify-content: center;
   padding: 1rem;
- position: fixed;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1000;
-  
-  
 }
 
 .nav {
@@ -23,11 +21,7 @@
   max-width: 1200px; /* or 1100px, 1280px, etc. */
   border-radius: 0.6rem;
   position: relative;
-  
-  
-  
-  
-  
+
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
   will-change: transform;
@@ -49,7 +43,7 @@
   border: none;
   font-size: 1.2rem;
   text-decoration: none;
-  
+
   color: inherit;
   order: 3;
   width: 2rem;
@@ -81,7 +75,7 @@
     width: 2rem;
     height: 2rem;
     border-radius: 5px;
-    background-color: rgb(234, 243, 252, .5);
+    background-color: rgb(234, 243, 252, 0.5);
   }
 
   .nav {
@@ -99,12 +93,9 @@
     padding: 1rem;
     border-radius: 4px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    
   }
 
   .open {
     display: flex;
   }
-
-
 }

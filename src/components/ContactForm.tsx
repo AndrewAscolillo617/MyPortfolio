@@ -10,7 +10,6 @@ export default function ContactForm() {
   });
   const [status, setStatus] = useState("");
 
- 
   /*
     handleChange : This updates the the variable formData every time the user types into a field.
     ... formData : This spreads the existing form data so you keep all previously typed values, 
@@ -72,48 +71,46 @@ export default function ContactForm() {
 
   return (
     <div id="contact" className={styles.ContactForm}>
-     <div className={styles.contactFormContent}>
-      <div className={styles.contactFormHeader}>
-        
-        <h1 className={styles.contactMeText}>Contact Me</h1>
-        
-        <p className={styles.contactMeInstructions}>
-          Please contact me at myEmail@myemail.com or through this contact form.
-        </p>
-      
-      </div>
-      
-      <form onSubmit={handleSubmit}>
-        <div className={styles.inputGroup}>
-          <input
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            placeholder="Your name"
-            required
-          />
-          <input
-            name="email"
-            type="email"
-            value={formData.email}
-            onChange={handleChange}
-            placeholder="Your email"
-            required
-          />
-          <textarea
-            className={styles.textBox}
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-            placeholder="Your message"
-            required
-          />
-          <button type="submit">Send</button>
-          <p>{status}</p>
+      <div className={styles.contactFormContent}>
+        <div className={styles.contactFormHeader}>
+          <h1 className={styles.contactMeText}>Contact Me</h1>
+
+          <p className={styles.contactMeInstructions}>
+            Please contact me at myEmail@myemail.com or through this contact
+            form.
+          </p>
         </div>
-      
-      </form>
-    </div>
+
+        <form onSubmit={handleSubmit}>
+          <div className={styles.inputGroup}>
+            <input
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              placeholder="Your name"
+              required
+            />
+            <input
+              name="email"
+              type="email"
+              value={formData.email}
+              onChange={handleChange}
+              placeholder="Your email"
+              required
+            />
+            <textarea
+              className={styles.textBox}
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              placeholder="Your message"
+              required
+            />
+            <button type="submit">Send</button>
+            <p>{status}</p>
+          </div>
+        </form>
+      </div>
     </div>
   );
 }

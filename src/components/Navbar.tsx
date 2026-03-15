@@ -14,12 +14,12 @@ const navItems = [
   { label: "DSA", href: "/dsa" },
   { label: "Projects", href: "/projects" },
   { label: "Blog/Notes", href: "/notes" },
-  { label: "Contact", href: "/#contact"},
+  { label: "Contact", href: "/#contact" },
 ];
 
 export default function Navbar() {
   const [activeMenu, setActiveMenu] = useState<null | "links" | "themes">(null);
-  
+
   //console.log("NAVBAR MOUNTED")
   /*
     handleClick takes one argument: key, which is of type union and must be either 'themes'( you currently have the theme menu open), or 'links' (you clicked the hamburger button and have the nav bar dropdown ).
@@ -36,18 +36,16 @@ export default function Navbar() {
   const handleClick = (key: "themes" | "links") => {
     setActiveMenu((prev) => (prev == key ? null : key));
   };
-  
+
   const pathname = usePathname();
-  console.log(activeMenu)
+  console.log(activeMenu);
   return (
     <div className={styles.navParent}>
       <nav className={styles.nav}>
         <div className={styles.logo}>
           <button className={styles.logoButton}>
-            <Link href='/'>
-            
+            <Link href="/">
               <Image src={`/AALogo3.png`} width={60} height={50} alt="logo" />
-            
             </Link>
           </button>
         </div>
@@ -56,10 +54,8 @@ export default function Navbar() {
           <button
             className={styles.toggle}
             onClick={() => {
-              
               handleClick("links");
-              console.log(activeMenu)
-              
+              console.log(activeMenu);
             }}
           >
             ☰
@@ -76,22 +72,15 @@ export default function Navbar() {
                   <Link
                     href={href}
                     className={`link ${pathname === href ? `active` : ""}`}
-                    
                     onClick={(e) => {
-                    
-                      
                       handleClick("links");
-                    
-                     if (href.startsWith("/#") && pathname === "/") {
+
+                      if (href.startsWith("/#") && pathname === "/") {
                         e.preventDefault();
                         const el = document.getElementById(href.slice(2));
                         if (el) {
-                          el.scrollIntoView({ behavior: "smooth"})
+                          el.scrollIntoView({ behavior: "smooth" });
                         }
-                        
-                        
-                       
-                        
                       }
                     }}
                   >

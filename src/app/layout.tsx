@@ -6,7 +6,6 @@ import { cookies } from "next/headers";
 import RootLayoutClient from "./rootLayoutClient";
 import "./globals.css";
 
-
 export default async function RootLayout({
   children,
 }: {
@@ -21,10 +20,7 @@ export default async function RootLayout({
     <html data-theme={theme} suppressHydrationWarning>
       <body style={{ padding: 0, margin: 0 }}>
         <ThemeProvider initialTheme={theme as Theme}>
-          <LayoutStyle>
-            {children}
-          </LayoutStyle>
-        
+          <LayoutStyle>{children}</LayoutStyle>
         </ThemeProvider>
       </body>
     </html>

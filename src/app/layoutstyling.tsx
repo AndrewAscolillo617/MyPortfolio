@@ -14,15 +14,13 @@ const inter = Inter({
 const LayoutStyle = ({ children }: { children: React.ReactNode }) => {
   const { theme } = useTheme();
 
- 
-
   return (
     <div className={`${inter.className} layout`}>
       <div className="gradientLightTop">
         <GradientBackgroundLight />
       </div>
-      
-      <div style={{ position: "relative", zIndex: 1 , paddingTop: "115px"}}>
+
+      <div style={{ position: "relative", zIndex: 1, paddingTop: "115px" }}>
         <Navbar />
         {children}
       </div>

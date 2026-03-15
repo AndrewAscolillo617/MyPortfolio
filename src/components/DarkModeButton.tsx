@@ -47,9 +47,7 @@ const DarkModeButton = ({ activeDropDownMenu, handleClick }) => {
               toggleTheme(value as Theme);
               handleClick("themes");
             }}
-            className={
-              selectedItem === value ? 'active' : 'themeOptions'
-            }
+            className={selectedItem === value ? "active" : "themeOptions"}
           >
             {label}
           </li>
