@@ -11,7 +11,6 @@ import Image from "next/image";
 const navItems = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
-  { label: "DSA", href: "/dsa" },
   { label: "Projects", href: "/projects" },
   { label: "Blog/Notes", href: "/notes" },
   { label: "Contact", href: "/#contact" },
@@ -43,9 +42,18 @@ export default function Navbar() {
     <div className={styles.navParent}>
       <nav className={styles.nav}>
         <div className={styles.logo}>
-          <button className={styles.logoButton}>
+          <button className={`logoButton`}>
             <Link href="/">
-              <Image src={`/AALogo3.png`} width={60} height={50} alt="logo" />
+              <svg
+                className={styles.logo}
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M4 14c2.5-4.5 6-6.5 10-5.5 1.8.4 3 1.5 3.4 3 .3 1.2-.1 2.4-.9 3.2-1.1 1.1-2.7 1.5-4.3 1.2-1.4-.3-2.5-1-3.3-2l-2.4 2.6C8 18.3 10 19.3 12.3 19.7c2.7.5 5.3-.3 7.1-2.1 1.6-1.6 2.3-3.9 1.7-6.1-.7-2.6-2.7-4.6-5.6-5.3C10.7 4.9 7 6.7 4 11.2V14z" />
+              </svg>
             </Link>
           </button>
         </div>
@@ -60,36 +68,37 @@ export default function Navbar() {
           >
             ☰
           </button>
+          <div className={styles.menuBack}>
+            <ul
+              className={`menu  ${styles.menu} ${activeMenu == "links" ? styles.open : ""}`}
+            >
+              {navItems.map(
+                (
+                  { label, href }, // label : "Home", href "/"etc.
+                ) => (
+                  <li key={href}>
+                    <Link
+                      href={href}
+                      className={`link ${pathname === href ? `active` : ""}`}
+                      onClick={(e) => {
+                        handleClick("links");
 
-          <ul
-            className={`menu  ${styles.menu} ${activeMenu == "links" ? styles.open : ""}`}
-          >
-            {navItems.map(
-              (
-                { label, href }, // label : "Home", href "/"etc.
-              ) => (
-                <li key={href}>
-                  <Link
-                    href={href}
-                    className={`link ${pathname === href ? `active` : ""}`}
-                    onClick={(e) => {
-                      handleClick("links");
-
-                      if (href.startsWith("/#") && pathname === "/") {
-                        e.preventDefault();
-                        const el = document.getElementById(href.slice(2));
-                        if (el) {
-                          el.scrollIntoView({ behavior: "smooth" });
+                        if (href.startsWith("/#") && pathname === "/") {
+                          e.preventDefault();
+                          const el = document.getElementById(href.slice(2));
+                          if (el) {
+                            el.scrollIntoView({ behavior: "smooth" });
+                          }
                         }
-                      }
-                    }}
-                  >
-                    {label}
-                  </Link>
-                </li>
-              ),
-            )}
-          </ul>
+                      }}
+                    >
+                      {label}
+                    </Link>
+                  </li>
+                ),
+              )}
+            </ul>
+          </div>
           <DarkModeButton
             activeDropDownMenu={activeMenu}
             handleClick={handleClick}

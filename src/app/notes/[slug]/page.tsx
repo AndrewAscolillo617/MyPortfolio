@@ -16,9 +16,9 @@ export default async function NotePage({
   const { slug } = await params;
 
   switch (slug) {
-    case "dsa-notes":
+    case "dsa-notes-prefix-suffix-product":
       return <BlogPostOne />;
-    case "nextjs-routing":
+    case "dsa-notes-2d-dp":
       return <BlogPostTwo />;
     default:
       return notFound();

@@ -63,7 +63,11 @@ export default function ContactForm() {
       });
 
       const result = await res.json();
-      setStatus(result.ok ? "Message sent!" : "Error sending message.");
+      setStatus(
+        result.ok
+          ? "Your message was sent successfully."
+          : "Error sending message.",
+      );
     } catch (err) {
       setStatus("Submission failed.");
     }
@@ -76,8 +80,7 @@ export default function ContactForm() {
           <h1 className={styles.contactMeText}>Contact Me</h1>
 
           <p className={styles.contactMeInstructions}>
-            Please contact me at myEmail@myemail.com or through this contact
-            form.
+            Please contact me by filling out the form below:
           </p>
         </div>
 
@@ -106,8 +109,9 @@ export default function ContactForm() {
               placeholder="Your message"
               required
             />
+
             <button type="submit">Send</button>
-            <p>{status}</p>
+            <p className={styles.messageStatus}>{status}</p>
           </div>
         </form>
       </div>

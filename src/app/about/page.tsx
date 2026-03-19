@@ -8,7 +8,7 @@ export default function About() {
         <p>About Me</p>
         <p>
           {
-            "I'm a full-stack developer with a sharp focus on architectural clarity and system design. My academic foundation and hands-on experience have shaped a methodical, principle-driven approach to building scalable, maintainable software."
+            "I'm a full-stack developer with a sharp focus on architecture and system design. My academic foundation and hands-on experience have shaped a methodical, principle-driven approach to building scalable, maintainable software."
           }
         </p>
 
@@ -29,7 +29,7 @@ export default function About() {
         </p>
         <p>
           {
-            "I'm excited to contribute to a company that values clarity, intent, and technical excellence as much as I do."
+            "My goal is to contribute to a team that values purposeful work and strong engineering practices."
           }
         </p>
         <p>

@@ -28,6 +28,7 @@
   --menu-bg: rgba(255, 255, 255, 0.98);
   --theme-selector-bg: rgba(255, 255, 255, 0.98);
   --theme-option-color: rgb(0, 0, 0);
+  --logo-glow-color: #00ffbf;
 }
 
 :root[data-theme="dark"] {
@@ -42,8 +43,28 @@
   --menu-bg: rgba(81, 74, 86, 0.98);
   --theme-selector-bg: rgba(81, 74, 86, 0.98);
   --theme-option-color: white;
+  --logo-glow-color: #00ffbf;
+}
+.logoButton {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+.logoButton::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 8px; /* or 50% if your logo is round */
+  background: var(--logo-glow-color);
+  opacity: 0.15;
+  filter: blur(12px);
+  z-index: -1;
+}
 .link {
   font-size: 0.85rem;
   color: inherit;
@@ -69,6 +90,11 @@
   color: #00ffbf;
   text-decoration: none;
   font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.active:hover {
+  color: #f300d3;
 }
 
 .link:hover {

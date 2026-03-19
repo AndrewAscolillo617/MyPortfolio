@@ -1,0 +1,42 @@
+.blogPage {
+  width: 85%;
+  max-width: 1200px; /* or 1100px, 1280px, etc. */
+
+  margin: 2rem auto 2rem auto;
+
+  padding: 1rem;
+  text-align: center;
+}
+
+.header {
+  font-size: clamp(2rem, 2vw, 4rem);
+  margin-bottom: 2rem;
+}
+
+.subHeader {
+  font-style: italic;
+  width: 60%;
+  margin: 2rem auto 4rem auto;
+}
+
+.mainText {
+  text-align: left;
+  margin: 2rem auto 2rem auto;
+}
+
+.exampleContainer {
+  padding: 1rem;
+  text-align: left;
+}
+
+.exampleHeader {
+  margin: 1rem auto 1rem auto;
+  font-weight: bold;
+}
+
+.exampleList {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  margin-left: 1rem;
+}
