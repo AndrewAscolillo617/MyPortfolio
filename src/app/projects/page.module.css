@@ -1,12 +1,9 @@
 .projectPage {
-  width: 80%;
+  width: 100%;
+  max-width: 1200px;
   justify-self: center;
-}
-
-.header {
-  justify-self: center;
-}
-
-.grid {
-  justify-self: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem; /* prevents edge hugging on mobile */
+  padding-right: 1rem;
 }

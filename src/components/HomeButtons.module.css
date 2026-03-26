@@ -37,11 +37,23 @@
   position: relative;
   justify-self: center;
   display: flex;
+  align-items: center;
+  justify-content: center;
+
   height: 2rem;
   width: 2rem;
+  min-height: 2rem;
+  min-width: 2rem;
+
   border-radius: 50%;
   border: solid 0.01px;
   border-color: rgb(230, 230, 230);
   background-color: white;
   cursor: pointer;
+}
+
+.gitHubButton svg {
+  width: 1.2rem;
+  height: 1.2rem;
+  fill: black;
 }
